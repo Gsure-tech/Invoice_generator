@@ -1,4 +1,3 @@
-import pandas as pd
 import glob
 from fpdf import FPDF
 from pathlib import Path
@@ -6,8 +5,9 @@ from pathlib import Path
 
 filepaths = glob.glob("text_files/*.txt")
 
+pdf = FPDF(orientation="P", unit="mm", format="A4")
+
 for filepath in filepaths:
-    pdf = FPDF(orientation="P", unit="mm", format="A4")
     pdf.add_page()
     filename = Path(filepath).stem
     pdf.set_font(family="Times", size=16, style="B")
