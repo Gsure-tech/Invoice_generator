@@ -24,8 +24,8 @@ for filepath in filepaths:
         pdf.set_font(family="Times", size=10)
         pdf.set_text_color(80,80,80)
         pdf.cell(w=30, h=8, txt=str(row["product_id"]), border=1)
-        pdf.cell(w=70, h=8, txt=str(row["product_name"]))
-        pdf.cell(w=30, h=8, txt=str(row["amount_purchased"]))
+        pdf.cell(w=70, h=8, txt=str(row["product_name"]),border=1)
+        pdf.cell(w=30, h=8, txt=str(row["amount_purchased"]), border=1)
         pdf.cell(w=30, h=8, txt=str(row["price_per_unit"]),border=1)
         pdf.cell(w=30, h=8, txt=str(row["total_price"]),border=1, ln=1)
 
