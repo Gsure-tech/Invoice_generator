@@ -21,9 +21,13 @@ for filepath in filepaths:
 
     df = pd.read_excel(filepath, sheet_name="Sheet 1")
     for index, row in df.iterrows():
-        pdf.set_font()
-        pdf.set_text_color()
-        pdf.cell()
+        pdf.set_font(family="Times", size=10)
+        pdf.set_text_color(80,80,80)
+        pdf.cell(w=30, h=8, txt=row["product_id"])
+        pdf.cell(w=70, h=8, txt=row["product_name"])
+        pdf.cell(w=30, h=8, txt=row["product_id"])
+        pdf.cell(w=30, h=8, txt=row["product_id"])
+        pdf.cell(w=30, h=8, txt=row["product_id"])
 
 
     pdf.output(f"PDFs/{filename}.pdf")
